@@ -211,7 +211,7 @@ export default function ProductDetails({ product }: Props) {
           <h2>Health Benefits</h2>
 
           <div className="uses-grid">
-            {product.uses.map((use, index) => (
+            {(product.uses ?? []).map((use, index) => (
               <div
                 key={index}
                 className="use-item"

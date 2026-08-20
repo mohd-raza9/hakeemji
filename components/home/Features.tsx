@@ -3,33 +3,33 @@ import "./Features.css";
 import Link from "next/link";
 
 import {
-  Leaf,
   UserRound,
-  HeartPulse,
   Video,
   Truck,
   Users,
+  ShoppingBag,
+  GraduationCap,
   ArrowRight,
 } from "lucide-react";
 
 const features = [
   {
-    icon: Leaf,
-    title: "100% Natural",
-    description: "Pure herbal medicines made from authentic Unani ingredients.",
-    href: "/features/natural",
+    icon: ShoppingBag,
+    title: "Shop Medicines",
+    description: "Explore authentic Unani medicines and herbal products.",
+    href: "/shop",
+  },
+  {
+    icon: GraduationCap,
+    title: "Unani Courses",
+    description: "Learn about Unani medicine, wellness, and traditional healing.",
+    href: "/courses",
   },
   {
     icon: UserRound,
     title: "Expert Hakeem",
     description: "Experienced professionals providing trusted consultation.",
     href: "/features/expert-hakeem",
-  },
-  {
-    icon: HeartPulse,
-    title: "Personalized",
-    description: "Every treatment plan is customized for each patient.",
-    href: "/features/personalized",
   },
   {
     icon: Video,
@@ -50,6 +50,7 @@ const features = [
     href: "/features/trusted",
   },
 ];
+
 
 export default function Features() {
   return (
@@ -81,42 +82,30 @@ export default function Features() {
             const Icon = item.icon;
 
             return (
-
               <Link
                 href={item.href}
-                target="_blank"
                 key={index}
                 className="feature-card"
               >
 
                 <div className="feature-icon">
-
                   <Icon size={34} />
-
                 </div>
 
                 <h3>
-
                   {item.title}
-
                 </h3>
 
                 <p>
-
                   {item.description}
-
                 </p>
 
                 <div className="feature-link">
-
                   Learn More
-
                   <ArrowRight size={18} />
-
                 </div>
 
               </Link>
-
             );
 
           })}

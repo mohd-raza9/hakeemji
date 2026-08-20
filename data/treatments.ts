@@ -44,8 +44,249 @@ export interface TreatmentPackage {
 }
 
 export const treatments: TreatmentPackage[] = [
-  {
+
+    {
     id: 1,
+
+    slug: "special-shaadi-ka-course",
+
+    title: "Special Shaadi Ka Course",
+
+    shortDescription:
+      "Traditional Unani wellness course for men's vitality, stamina and overall male wellness.",
+
+    details:
+      "A 40-day traditional Unani wellness course containing a combination of Majoon, tablets and oil. The course is intended to support men's vitality, stamina, digestive wellness and overall physical wellbeing. The package includes Gold Majoon (Sona Bhasm Wali), Sparm Majoon, Kamini Tablet, Shilajeet Tablet, Takravarti, Pachan Shakti Goli and Badshah Tila Oil.",
+
+    image: "/treatments/special-shaadi-course.jpg",
+
+    images: [
+      "/treatments/special-shaadi-course/1.jpg",
+      "/treatments/special-shaadi-course/2.jpg"
+    ],
+
+    price: 4500,
+
+    oldPrice: 5000,
+
+    discount: 10,
+
+    stock: 25,
+
+    duration: "40 Days",
+
+    rating: 4.9,
+
+    badge: "Special Course",
+
+    featured: true,
+
+    symptoms: [
+      "Male Weakness",
+      "Low Vitality",
+      "Low Stamina",
+      "Physical Weakness",
+      "Low Energy",
+      "Digestive Weakness"
+    ],
+
+    medicines: [
+      "Gold Majoon (Sona Bhasm Wali) - 500gm",
+      "Sparm Majoon - 500gm",
+      "Kamini Tablet - 40 Pills",
+      "Shilajeet Tablet - 40 Pills",
+      "Takravarti",
+      "Pachan Shakti Goli - 80 Pills",
+      "Badshah Tila Oil - 15 ML"
+    ],
+
+    benefits: [
+      "Supports men's overall vitality",
+      "Supports stamina and physical energy",
+      "Traditional Unani wellness formulation",
+      "Supports digestive wellness",
+      "Complete 40-day course",
+      "Combination of Majoon, tablets and external oil"
+    ],
+
+    ingredients: [
+      "Gold Majoon (Sona Bhasm Wali)",
+      "Sparm Majoon",
+      "Kamini Tablet",
+      "Shilajeet Tablet",
+      "Takravarti",
+      "Pachan Shakti Goli",
+      "Badshah Tila Oil"
+    ],
+
+    howToUse: [
+      "Take the medicines only as directed by your doctor or qualified Unani practitioner.",
+      "Follow the complete prescribed course.",
+      "Use Badshah Tila Oil externally as directed.",
+      "Do not exceed the recommended dosage.",
+      "Consult your doctor before using the course with other medicines."
+    ],
+
+    doctorNote:
+      "For best results, follow the prescribed dosage and complete the recommended course under the guidance of a qualified healthcare or Unani practitioner.",
+
+    faqs: [
+      {
+        question: "How long is the Special Shaadi Ka Course?",
+        answer:
+          "The complete course is designed for 40 days."
+      },
+      {
+        question: "What is the price of the 40-day course?",
+        answer:
+          "The listed price of the complete 40-day course is ₹4,500."
+      },
+      {
+        question: "Is there a 20-day course available?",
+        answer:
+          "Yes. A 20-day medicine course is available at a price of ₹2,700."
+      },
+      {
+        question: "What medicines are included in the course?",
+        answer:
+          "The course includes Gold Majoon (Sona Bhasm Wali), Sparm Majoon, Kamini Tablet, Shilajeet Tablet, Takravarti, Pachan Shakti Goli and Badshah Tila Oil."
+      },
+      {
+        question: "How should I take these medicines?",
+        answer:
+          "Use the medicines according to the dosage and instructions provided by a qualified doctor or Unani practitioner."
+      },
+      {
+        question: "Can I take this course with other medicines?",
+        answer:
+          "Consult a qualified healthcare professional before combining this course with other medicines or supplements."
+      }
+    ]
+  },
+    {
+    id: 11,
+
+    slug: "ganth-rasuli-cyst-care-course",
+
+    title: "Ganth & Rasuli Care Course",
+
+    shortDescription:
+      "Special 30-day Unani wellness course for concerns related to ganth, cyst, rasuli and excess body fat.",
+
+    details:
+      "A specially designed 30-day traditional Unani wellness course containing selected herbal formulations. The course includes tablets, syrups, oil, drops and 30 empty cups. It is intended to provide supportive traditional care for concerns related to ganth, cyst, rasuli and excess body fat. Use the course only under the guidance of a qualified healthcare or Unani practitioner.",
+
+    image: "/treatments/ganth-course.jpg",
+
+    images: [
+      "/treatments/ganth-course/1.jpg",
+      "/treatments/ganth-course/2.jpg"
+      
+    ],
+
+    price: 2500,
+
+    discount: 0,
+
+    stock: 0,
+
+    duration: "30 Days",
+
+    rating: 0,
+
+    badge: "Special Course",
+
+    featured: true,
+
+    symptoms: [
+      "Bacchedani Ki Ganth",
+      "Breast Ki Ganth",
+      "Sharir Mein Hone Wali Ganth",
+      "Sharir Mein Charbi",
+      "Kisi Bhi Tarah Ki Ganth",
+      "Sharir Mein Banne Wali Rasuli"
+    ],
+
+    medicines: [
+      "Kalyan Cyst Tablet - 60 Vati",
+      "Udaramrit Yog Syrup - 200ml × 3",
+      "Cyst Syrup - 200ml × 3",
+      "Chandanvalaksayadi Oil",
+      "Cyst Drop - 15ml × 2",
+      "30 Cup Khali"
+    ],
+
+    benefits: [
+      "Special 30-day traditional wellness course",
+      "Combination of tablets, syrups, oil and drops",
+      "Includes Kalyan Cyst Tablet",
+      "Includes Udaramrit Yog Syrup",
+      "Includes Cyst Syrup",
+      "Includes Chandanvalaksayadi Oil",
+      "Includes Cyst Drops",
+      "Complete package with 30 empty cups"
+    ],
+
+    ingredients: [
+      "Kalyan Cyst Tablet",
+      "Udaramrit Yog Syrup",
+      "Cyst Syrup",
+      "Chandanvalaksayadi Oil",
+      "Cyst Drop"
+    ],
+
+    howToUse: [
+      "Use all medicines only according to the dosage prescribed by your doctor or qualified Unani practitioner.",
+      "Follow the complete 30-day course as advised.",
+      "Use the oil and drops only as directed by the practitioner.",
+      "Do not exceed the recommended dosage.",
+      "Keep all medicines stored according to their label instructions.",
+      "Consult a qualified healthcare professional before using the course with other medicines."
+    ],
+
+    doctorNote:
+      "This is a traditional wellness course. Ganth, cyst or rasuli can have different causes and may require proper medical evaluation. Do not rely on this course as a substitute for diagnosis or treatment. Use the medicines only under the guidance of a qualified healthcare or Unani practitioner.",
+
+    faqs: [
+      {
+        question: "How long is the Ganth & Rasuli Care Course?",
+        answer:
+          "The complete course is designed for 30 days."
+      },
+
+      {
+        question: "What is the price of this course?",
+        answer:
+          "The listed price of the complete 30-day course is ₹2,500."
+      },
+
+      {
+        question: "What medicines are included in the course?",
+        answer:
+          "The package includes Kalyan Cyst Tablet (60 Vati), Udaramrit Yog Syrup (200ml × 3), Cyst Syrup (200ml × 3), Chandanvalaksayadi Oil, Cyst Drop (15ml × 2) and 30 empty cups."
+      },
+
+      {
+        question: "What concerns is this course intended for?",
+        answer:
+          "The course is presented for traditional wellness support related to concerns such as ganth, cyst, rasuli and excess body fat. Proper medical evaluation is recommended for any lump or swelling."
+      },
+
+      {
+        question: "Can I use this course with other medicines?",
+        answer:
+          "Consult a qualified healthcare professional before combining this course with other medicines or treatments."
+      },
+
+      {
+        question: "How should the medicines be taken?",
+        answer:
+          "The medicines should be taken according to the dosage and instructions provided by a qualified doctor or Unani practitioner."
+      }
+    ]
+  },
+  {
+    id: 10,
 
     slug: "womens-health-package",
 
@@ -61,9 +302,8 @@ export const treatments: TreatmentPackage[] = [
 
     images: [
       "/treatments/women-health/1.jpg",
-      "/treatments/women-health/2.jpg",
-      "/treatments/women-health/3.jpg",
-      "/treatments/women-health/4.jpg"
+      "/treatments/women-health/2.jpg"
+      
     ],
 
     price: 650,
@@ -427,7 +667,113 @@ export const treatments: TreatmentPackage[] = [
       }
     ]
   },
+{
+  id: 12,
 
+  slug: "mardana-kamzori-special-course",
+
+  title: "Mardana Kamzori Care Course",
+
+  shortDescription:
+    "20-day traditional wellness course containing selected Unani formulations.",
+
+  details:
+    "A 20-day traditional Unani wellness course containing Maharas Nadi Syrup, Loqmani Gold Majoon, Kamini Tablet and Shilajeet Tablet. The package is intended as a traditional wellness formulation for men's health concerns. Use according to the guidance of a qualified healthcare or Unani practitioner.",
+
+  image: "/treatments/mardana-kamzori-course.jpg",
+
+  images: [
+    "/treatments/mardana-kamzori-course/1.jpg",
+    "/treatments/mardana-kamzori-course/2.jpg"
+  ],
+
+  price: 1300,
+
+  discount: 0,
+
+  stock: 0,
+
+  duration: "20 Days",
+
+  rating: 0,
+
+  badge: "Special Course",
+
+  featured: true,
+
+  symptoms: [
+    "Men's General Wellness",
+    "Low Energy",
+    "General Weakness",
+    "Men's Vitality Concerns"
+  ],
+
+  medicines: [
+    "Maharas Nadi Syrup - 200ml",
+    "Loqmani Gold Majoon - 250gm",
+    "Kamini Tablet - 20 Pills",
+    "Shilajeet Tablet - 20 Pills"
+  ],
+
+  benefits: [
+    "20-day traditional wellness course",
+    "Selected Unani formulations",
+    "Includes Maharas Nadi Syrup",
+    "Includes Loqmani Gold Majoon",
+    "Includes Kamini Tablet",
+    "Includes Shilajeet Tablet"
+  ],
+
+  ingredients: [
+    "Maharas Nadi Syrup",
+    "Loqmani Gold Majoon",
+    "Kamini Tablet",
+    "Shilajeet Tablet"
+  ],
+
+  howToUse: [
+    "Use the medicines only according to the dosage prescribed by a qualified healthcare or Unani practitioner.",
+    "Follow the recommended 20-day course.",
+    "Do not exceed the recommended dosage.",
+    "Read the individual product labels carefully before use.",
+    "Consult a qualified healthcare professional if you are taking other medicines."
+  ],
+
+  doctorNote:
+    "This package contains traditional Unani formulations intended for men's wellness. Individual results may vary. Use the medicines according to professional guidance and do not use them as a substitute for medical diagnosis or treatment.",
+
+  faqs: [
+    {
+      question: "How long is this course?",
+      answer:
+        "The complete course is designed for 20 days."
+    },
+
+    {
+      question: "What is the price of the course?",
+      answer:
+        "The listed price of the complete course is ₹1,300."
+    },
+
+    {
+      question: "What medicines are included?",
+      answer:
+        "The package includes Maharas Nadi Syrup (200ml), Loqmani Gold Majoon (250gm), Kamini Tablet (20 pills) and Shilajeet Tablet (20 pills)."
+    },
+
+    {
+      question: "How should the medicines be used?",
+      answer:
+        "The medicines should be used according to the dosage and instructions provided by a qualified healthcare or Unani practitioner."
+    },
+
+    {
+      question: "Can I take these medicines with other medicines?",
+      answer:
+        "If you are already taking medicines or have an existing medical condition, consult a qualified healthcare professional before using this course."
+    }
+  ]
+},
   {
     id: 6,
 
@@ -523,7 +869,119 @@ export const treatments: TreatmentPackage[] = [
       }
     ]
   },
+{
+  id: 13,
 
+  slug: "mardana-kamzori-special-course-1800",
+
+  title: "Mardana Kamzori Ki Har Samasya Ka Hal",
+
+  shortDescription:
+    "20 din ka Special Unani Course containing selected traditional formulations for men's wellness.",
+
+  details:
+    "Special 20-day course containing Maharas Nadi Syrup, Dhaatu Musli Powder, Loqmani Gold Majoon, Loqmani Kamuni Majoon, Kamini Tablet and Shilajeet Tablet.",
+
+  image: "/treatments/mardana-kamzori-1800.jpg",
+
+  images: [
+    "/treatments/mardana-kamzori-1800/1.jpg",
+    "/treatments/mardana-kamzori-1800/2.jpg",
+  ],
+
+  price: 1800,
+
+  discount: 0,
+
+  stock: 0,
+
+  duration: "20 Days",
+
+  rating: 0,
+
+  badge: "Special Course",
+
+  featured: true,
+
+  symptoms: [
+    "Mardana Kamzori",
+    "General Weakness",
+    "Low Energy",
+    "Men's Wellness"
+  ],
+
+  medicines: [
+    "Maharas Nadi Syrup - 200ML",
+    "Dhaatu Musli Powder - 100GM",
+    "Loqmani Gold Majoon - 250GM",
+    "Loqmani Kamuni Majoon - 250GM",
+    "Kamini Tablet - 20 Pills",
+    "Shilajeet Tablet - 20 Pills"
+  ],
+
+  benefits: [
+    "20 din ka complete course",
+    "Selected traditional Unani formulations",
+    "Maharas Nadi Syrup included",
+    "Dhaatu Musli Powder included",
+    "Loqmani Gold Majoon included",
+    "Loqmani Kamuni Majoon included",
+    "Kamini Tablet included",
+    "Shilajeet Tablet included"
+  ],
+
+  ingredients: [
+    "Maharas Nadi Syrup",
+    "Dhaatu Musli Powder",
+    "Loqmani Gold Majoon",
+    "Loqmani Kamuni Majoon",
+    "Kamini Tablet",
+    "Shilajeet Tablet"
+  ],
+
+  howToUse: [
+    "Medicines ko qualified Hakeem ya healthcare professional ki guidance ke mutabiq use karein.",
+    "Recommended 20-day course follow karein.",
+    "Recommended dosage se zyada use na karein.",
+    "Har medicine ke label par diye gaye instructions ko follow karein.",
+    "Agar aap already koi medicines le rahe hain to course start karne se pehle healthcare professional se consult karein."
+  ],
+
+  doctorNote:
+    "Yeh traditional Unani wellness course hai. Individual results vary kar sakte hain. Medicines ko qualified Hakeem ya healthcare professional ki guidance ke mutabiq use karein.",
+
+  faqs: [
+    {
+      question: "Yeh course kitne din ka hai?",
+      answer:
+        "Yeh complete course 20 din ke liye hai."
+    },
+
+    {
+      question: "Course ki price kya hai?",
+      answer:
+        "Complete 20-day course ki listed price ₹1,800 hai."
+    },
+
+    {
+      question: "Course mein kaunsi medicines included hain?",
+      answer:
+        "Course mein Maharas Nadi Syrup 200ML, Dhaatu Musli Powder 100GM, Loqmani Gold Majoon 250GM, Loqmani Kamuni Majoon 250GM, Kamini Tablet 20 Pills aur Shilajeet Tablet 20 Pills included hain."
+    },
+
+    {
+      question: "Course kaise use karna hai?",
+      answer:
+        "Medicines ko qualified Hakeem ya healthcare professional ke instructions aur recommended dosage ke according use karein."
+    },
+
+    {
+      question: "Kya main is course ko doosri medicines ke saath le sakta hoon?",
+      answer:
+        "Agar aap already koi medicines le rahe hain, to course start karne se pehle qualified healthcare professional se consult karein."
+    }
+  ]
+},
   {
     id: 7,
 

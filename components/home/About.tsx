@@ -1,4 +1,8 @@
+"use client";
+
 import "./About.css";
+
+import { useEffect, useRef } from "react";
 
 import {
   Award,
@@ -13,6 +17,35 @@ import Button from "../common/Button";
 import Container from "../common/Container";
 
 export default function About() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const section = document.getElementById("about");
+
+    if (!video || !section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {
+            // Browser autoplay block kar sakta hai
+          });
+        } else {
+          video.pause();
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
 
@@ -146,13 +179,10 @@ export default function About() {
 
               <video
 
-                autoPlay
-
-                muted
-
-                loop
-
-                playsInline
+                ref={videoRef}
+  loop
+  playsInline
+  controls
 
                 className="about-video"
 

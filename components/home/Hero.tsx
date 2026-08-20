@@ -1,7 +1,10 @@
+"use client";
+
 import "./Hero.css";
 import Link from "next/link";
-
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
 import {
   CheckCircle,
   ChevronDown,
@@ -13,12 +16,28 @@ import {
 import Button from "../common/Button";
 import Container from "../common/Container";
 
+const heroImages = [
+  "/hero/hero-image.png",
+  "/hero/hero-image2.png",
+  "/hero/hero-image3.png",
+  "/hero/hero-image4.png",
+];
+
 export default function Hero() {
+  const [activeImage, setActiveImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImage((prev) => (prev + 1) % heroImages.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="hero">
 
       {/* Background */}
-
       <div className="hero-bg"></div>
 
       <div className="hero-glow-left"></div>
@@ -39,7 +58,7 @@ export default function Hero() {
 
         <div className="hero-grid">
 
-          {/* LEFT */}
+          {/* ================= LEFT ================= */}
 
           <div className="hero-left">
 
@@ -63,9 +82,7 @@ export default function Hero() {
               <br />
 
               <span>
-
                 Authentic Unani
-
               </span>
 
               <br />
@@ -76,41 +93,34 @@ export default function Hero() {
 
             <p className="hero-description">
 
-              Al Shifa Dawakhana – Premium Unani healthcare in
+              Shifa Dawakhana – Premium Unani healthcare in
               Meerut. Experience natural healing with experienced
               Hakeem and trusted herbal medicines.
 
             </p>
 
             <div className="hero-buttons">
-<Link
-  href="/appointment"
-  target="_blank"
->
 
-<Button className="hero-btn-primary">
+              <Link
+                href="/appointment"
+                target="_blank"
+              >
+                <Button className="hero-btn-primary">
+                  Book Appointment
+                </Button>
+              </Link>
 
-Book Appointment
-
-</Button>
-
-</Link>
-
-<Link
-  href="/shop"
-  target="_blank"
->
-
-<Button
-variant="outline"
-className="hero-btn-outline"
->
-
-Shop Medicines
-
-</Button>
-
-</Link>
+              <Link
+                href="/shop"
+                target="_blank"
+              >
+                <Button
+                  variant="outline"
+                  className="hero-btn-outline"
+                >
+                  Shop Medicines
+                </Button>
+              </Link>
 
             </div>
 
@@ -124,9 +134,7 @@ Shop Medicines
                 />
 
                 <span>
-
                   100% Natural
-
                 </span>
 
               </div>
@@ -139,9 +147,7 @@ Shop Medicines
                 />
 
                 <span>
-
                   Expert Hakeem
-
                 </span>
 
               </div>
@@ -154,9 +160,7 @@ Shop Medicines
                 />
 
                 <span>
-
                   Fast Delivery
-
                 </span>
 
               </div>
@@ -164,65 +168,126 @@ Shop Medicines
             </div>
 
           </div>
-{/* ================= RIGHT ================= */}
 
-<div className="hero-right">
 
-  {/* Premium Image Frame */}
+          {/* ================= RIGHT ================= */}
 
-  <div className="hero-image-wrapper">
+          <div className="hero-right">
 
-    {/* Gold Corner Decoration */}
+            {/* Premium Image Frame */}
 
-    <div className="frame-corner frame-top-left"></div>
-    <div className="frame-corner frame-top-right"></div>
-    <div className="frame-corner frame-bottom-left"></div>
-    <div className="frame-corner frame-bottom-right"></div>
+            <div className="hero-image-wrapper">
 
-    <Image
-      src="/hero/hero-image.png"
-      alt="Shifa Dawakhana"
-      width={520}
-      height={650}
-      priority
-      className="hero-image"
-    />
+              {/* Gold Corner Decoration */}
 
-  </div>
+              <div className="frame-corner frame-top-left"></div>
 
-  {/* Floating Leaf */}
+              <div className="frame-corner frame-top-right"></div>
 
-  <div className="floating-leaf">
+              <div className="frame-corner frame-bottom-left"></div>
 
-    <Leaf
-      size={34}
-      className="floating-leaf-icon"
-    />
+              <div className="frame-corner frame-bottom-right"></div>
 
-  </div>
 
-</div>
+              {/* ================= IMAGE SLIDER ================= */}
+
+              <div className="hero-image-slider">
+
+                {/* Image 1 */}
+
+                <Image
+                  src="/hero/hero-image.png"
+                  alt="Shifa Dawakhana"
+                  width={520}
+                  height={650}
+                  priority
+                  sizes="520px"
+                  className={`hero-image hero-slide ${
+                    activeImage === 0 ? "active" : ""
+                  }`}
+                />
+
+
+                {/* Image 2 */}
+
+                <Image
+                  src="/hero/hero-image2.png"
+                  alt="Shifa Dawakhana"
+                  width={520}
+                  height={650}
+                  sizes="520px"
+                  className={`hero-image hero-slide ${
+                    activeImage === 1 ? "active" : ""
+                  }`}
+                />
+
+
+                {/* Image 3 */}
+
+                <Image
+                  src="/hero/hero-image3.png"
+                  alt="Shifa Dawakhana"
+                  width={520}
+                  height={650}
+                  sizes="520px"
+                  className={`hero-image hero-slide ${
+                    activeImage === 2 ? "active" : ""
+                  }`}
+                />
+
+
+                {/* Image 4 */}
+
+                <Image
+                  src="/hero/hero-image4.png"
+                  alt="Shifa Dawakhana"
+                  width={520}
+                  height={650}
+                  sizes="520px"
+                  className={`hero-image hero-slide ${
+                    activeImage === 3 ? "active" : ""
+                  }`}
+                />
+
+              </div>
+
+            </div>
+
+
+            {/* Floating Leaf */}
+
+            <div className="floating-leaf">
+
+              <Leaf
+                size={34}
+                className="floating-leaf-icon"
+              />
+
+            </div>
+
+          </div>
 
         </div>
 
       </Container>
 
+
       {/* Bottom Gradient */}
 
       <div className="hero-bottom-gradient"></div>
 
+
       {/* Bottom Glow */}
 
       <div className="hero-bottom-glow"></div>
+
 
       {/* Scroll Indicator */}
 
       <div className="scroll-indicator">
 
         <span className="scroll-text">
-
           Scroll
-
         </span>
 
         <div className="scroll-mouse">

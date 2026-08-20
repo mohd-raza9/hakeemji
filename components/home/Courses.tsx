@@ -22,7 +22,11 @@ import {
   TreatmentPackage,
 } from "@/data/treatments";
 
-export default function Courses() {
+export default function Courses({
+  showAll = false,
+}: {
+  showAll?: boolean;
+}) {
   const [selectedTreatment, setSelectedTreatment] =
     useState<TreatmentPackage | null>(null);
 
@@ -36,7 +40,7 @@ export default function Courses() {
         />
 
         <div className="courses-grid">
-          {treatments.map((item) => (
+          {(showAll ? treatments : treatments.slice(0, 4)).map((item) => (
             <div className="course-card" key={item.id}>
               {/* Badge */}
               {item.badge && (
@@ -122,6 +126,23 @@ export default function Courses() {
             </div>
           ))}
         </div>
+
+                {!showAll && (
+          <div className="mt-10 flex justify-center">
+           <Link
+  href="/courses"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group relative z-50 inline-flex cursor-pointer items-center justify-center gap-3 rounded-full border-2 border-[#0B5D3B] bg-[#0B5D3B] px-10 py-4 text-base font-semibold text-white shadow-lg shadow-[#0B5D3B]/20 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A227] hover:bg-[#C9A227] hover:shadow-xl hover:shadow-[#C9A227]/30"
+>
+  <span>Show All Courses</span>
+
+  <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</Link>
+          </div>
+        )}
 
         {/* ==========================
             DETAILS MODAL
